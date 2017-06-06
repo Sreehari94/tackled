@@ -1,0 +1,137 @@
+.navbar-nav{
+	float:right;
+}
+body{
+	background-image: url(../img/bg.jpg);
+}
+.navbar-brand>img{
+	display:inline-block;
+}
+h1,h2,h3,h4,h5,h6,p{
+	color:white;
+}
+
+.question-box{
+	background-color:white!important;
+	border-radius:5px;
+	width:80%;
+	padding-bottom:20px;
+}
+.score-box{
+	display: none;
+	background-color:white;
+	width:80%;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	text-align: center;
+}
+.question-number{
+	background-color:green;
+	padding:7px;
+	color:white;
+	font-weight:bold;
+	float:left;
+}
+.question{
+	font-size: 18px;
+	padding-bottom:20px;
+}
+.nextButton {
+	margin-top:20px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.submitButton {
+	margin-top:20px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    font-size: 16px;
+}
+input[type=radio] {
+    display:none; 
+    text-align: left;
+}
+label + input[type=radio]{
+    display:inline-block;
+	width:40%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+label:hover + input[type=radio] { 
+	border:1px solid #000000;
+}
+label + input[type=radio]:checked { 
+   	background-image: none;
+   	background-color:#0C0;
+	color:#fff;
+	border:1px solid #0C0 !important;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.worngans{ 
+	background-color:red;
+	color:#fff; 
+	border:1px solid red !important;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+label{
+	display:inline-block;
+	width:40%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+.disableLabel{
+	pointer-events:none;
+}
+button:disabled {
+    background: #dddddd;
+}
+.optionId{
+	float: left;
+	padding:0px 10px;
+	border-radius: 50%;
+	border-right: 1px solid;
+	background-color: white;
+	color:black;
+}
+
+@media only screen and (max-width: 500px) {
+    label + input[type=radio]  {
+	    display:inline-block;
+		width:95%;
+		padding:10px;
+		border:1px solid #ddd;
+		margin-bottom:10px;
+		cursor:pointer;
+	}
+	label{
+	display:inline-block;
+	width:95%;
+	padding:10px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+}

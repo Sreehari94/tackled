@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html ng-app="Tackled">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> 
+        
+        <title>Tackled - A Kabaddi Quiz Game</title>
+        <meta name="description" content="First ever app to introduce quiz game entirely related to Kabaddi.">
+
+        <meta name="keywords" content="Tackled, Kabaddi, pro-kabaddi, PKL, quiz, game">
+
+        <meta name="copyright" content="Messy Fractals">        
+        <!-- Favicons-->
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <link rel="apple-touch-icon" type="image/x-icon" href="img/sparrowz_57x57.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/icon_72x72.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/icon_114x114.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/icon_144x144.png">
+
+        
+
+        <meta property="og:title" content="Tackled - A Kabaddi Quiz Game" />
+        <meta property="og:image" content="img/Tackled.png" />
+        <meta property="og:description" content="First ever app to introduce quiz game entirely related to Kabaddi." />
+        
+        <meta property="og:site_name" content="Tackled - A Kabaddi Quiz Game" />
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body ng-controller="WebsiteCtrl">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/tackled.png" width="30" height="30" alt="Tackled">&nbsp;&nbsp;&nbsp;<span style="font-size:22px;color:white;">Tackled</span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6" style="margin-top:12%">
+                        <h1>Tackled</h1>
+                        <p>The first ever Kabaddi quiz game app</p>
+                        <br/>
+                        <br/>
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-6 col-md-6">
+                                <center>
+                                    <img src="img/google-app.png" width="100%">
+                                </center>    
+                            </div>
+                            <div class="col-sm-6 col-xs-6 col-md-6">
+                                <center>
+                                    <img src="img/iphone-app.png" width="100%">
+                                </center>    
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <center>
+                            <img src="img/mobile-app.png" width="60%">
+                        </center> 
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="margin-bottom:30px;margin-top:50px;">
+                <center><h2>Glimpse of Tackled</h2>
+                <div class="row question-box" id="questionBox">
+                    <span class="question-number"><span>Q.</span>{{questionNumber}}</span><br/>
+                    <div class="question">{{currentMCQ.question}}</div>
+
+                    
+                    <label id="blockA"><input id="blockA" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[0].text}}" name="mcq"><span class="optionId">A</span>{{currentMCQ.choices[0].text}}</label>
+
+                    
+                    <label id="blockB"><input id="blockB" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[1].text}}" name="mcq"><span class="optionId">B</span>{{currentMCQ.choices[1].text}}</label><br/>
+
+                    
+                    <label id="blockC"><input id="blockC" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[2].text}}" name="mcq"><span class="optionId">C</span>{{currentMCQ.choices[2].text}}</label> 
+
+                    
+                    <label id="blockD"><input id="blockD" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[3].text}}" name="mcq"><span class="optionId">D</span>{{currentMCQ.choices[3].text}}</label> <br/>
+
+                    <button type="button" id="nextButton" class="nextButton" ng-disabled="enableButton" ng-click="shownextQuestion()">Next</button>
+                    <button type="button" id="submitButton" class="submitButton" ng-disabled="enableButton" ng-click="showScoreBoard()">Submit</button>
+                </div>
+
+                <div class="row score-box" id="scoreBox">
+                    <br/>
+                    <h2 style="color:black;">Congratulations</h2>
+                    <h3 style="color:black;">You scored {{points}} out of 30.</h3>
+                </div>
+            </div>
+            <hr>
+            <footer>
+                <div class="container-fluid" style="text-align:center;">
+                    <center>
+                        <div>
+                            <img src="img/fb.png" alt="tackled facebook page" style="padding:3px;">
+                            <img src="img/twitter.png" alt="tackled twitter page" style="padding:3px;">
+                            <img src="img/instagram.png" alt="tackled instagram page" style="padding:3px;">
+                        </div>
+                    </center>
+                    <p style="margin-top:20px;padding:0px;">© 2017 <a href="http://www.messyfractals.in/" target="_blank" style="color:white">Messy Fractals. All rights reserved.</a></p>
+                </div>
+            </footer>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/angular-1.6.1.min.js" type="text/javascript"></script>
+        <script src="js/web.js" type="text/javascript"></script>
+    </body>
+</html>

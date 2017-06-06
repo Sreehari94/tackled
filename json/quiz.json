@@ -1,0 +1,66 @@
+{
+  "header": {
+    "status": {
+      "statusCode": 0,
+      "statusMessage": "MCQ questions data found"
+    }
+  },
+  "body": {
+  	"mcq":[
+    	   {
+            "question":"Only player to have played in  4 PKL finals",
+            "choices":[
+                {
+                    "text":"Shabeer Bapu"
+                },
+                {
+                    "text":"Anup Kumar"
+                },
+                {
+                    "text":"Rajesh Mondal"
+                },
+                {
+                    "text":"Pardeep Narwal"
+                }
+            ],
+            "answer":"Shabeer Bapu"
+        },
+        {
+            "question":"Manjeet Chillar has always been associated with Puneri Paltans. Which team was he leading before Paltans?",
+            "choices":[
+                {
+                    "text":"Patna Pirates"
+                },
+                {
+                    "text":"Jaipur Pink Panthers"
+                },
+                {
+                    "text":"Bengaluru Bulls"
+                },
+                {
+                    "text":"Haryana Steelers"
+                }
+            ],
+            "answer":"Bengaluru Bulls"
+        },
+        {
+            "question":"Mohit Chillar : Bengaluru Bulls = ? : Puneri Paltan",
+            "choices":[
+                {
+                    "text":"Manjeet Chillar"
+                },
+                {
+                    "text":"Girish Ernak"
+                },
+                {
+                    "text":"Ravinder Pahal"
+                },
+                {
+                    "text":"Surender Nada"
+                }
+            ],
+            "answer":"Ravinder Pahal"
+        }
+        ]
+    }
+}
