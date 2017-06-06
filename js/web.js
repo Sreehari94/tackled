@@ -13,11 +13,11 @@ angular.module('Tackled', [])
 		var deferred=$q.defer();
 		$http.get('json/quiz.json').then(
             function(response) {
-                console.log("get MCQ data response: ", response);
+                /*console.log("get MCQ data response: ", response);*/
                 deferred.resolve(response.data.body);
             },
             function(error) {
-                console.log("Error: ", error)
+                /*console.log("Error: ", error)*/
                 deferred.reject("error");
             }
         )
@@ -26,9 +26,9 @@ angular.module('Tackled', [])
 
 	var showFirstQuestion=function(){
 		quizDatalength=quizData.mcq.length;
-		console.log("Quiz data length:", quizDatalength);
+		/*console.log("Quiz data length:", quizDatalength);*/
 		$scope.currentMCQ=quizData.mcq[0];
-		console.log("First Question Data:",$scope.currentMCQ);
+		/*console.log("First Question Data:",$scope.currentMCQ);*/
 	}
 
 	var initializeAll=function(){
@@ -37,7 +37,7 @@ angular.module('Tackled', [])
 			quizData=response;
 			showFirstQuestion();
 		},function(error){
-			console.log("return error:",error);
+			/*console.log("return error:",error);*/
 		});
 	}
 
@@ -87,11 +87,11 @@ angular.module('Tackled', [])
 	$scope.validateAnswer=function(event){
 		$scope.enableButton=false;
 		disableInputs();
-		console.log("Element Id:",event.target.attributes.id.value);
+		/*console.log("Element Id:",event.target.attributes.id.value);*/
 		var blockId=event.target.attributes.id.value;
-		console.log("Selected Choice:",$scope.selectedChoice," and Answer:",$scope.currentMCQ.answer);
+		/*console.log("Selected Choice:",$scope.selectedChoice," and Answer:",$scope.currentMCQ.answer);*/
 		if($scope.selectedChoice==$scope.currentMCQ.answer){
-			console.log("Answeris correct");
+			/*console.log("Answeris correct");*/
 			$scope.points=$scope.points+10;
 			document.getElementById(blockId).style.backgroundColor="green";
 			document.getElementById(blockId).style.color="white";
