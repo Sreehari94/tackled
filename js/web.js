@@ -142,3 +142,8 @@ angular.module('Tackled', ["ui.router"])
             })
 
     })
+
+  .run(['$state', '$stateParams',
+    function($state, $stateParams) {
+        //this solves page refresh and getting back to state
+}]);
