@@ -1,5 +1,6 @@
 angular.module('Tackled', ["ngRoute"])
 .controller('WebsiteCtrl', ['$scope', '$http', '$q', function($scope, $http, $q) {
+	$route.reload();
 	console.log("Inside WebsiteCtrl");
 	var quizData='';
 	var quizDatalength=0;
