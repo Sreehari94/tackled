@@ -124,8 +124,5 @@ angular.module('Tackled', ["ngRoute"])
     .when("/sitemap", {
         templateUrl : "sitemap.html"
     });
-    $locationProvider.html5Mode({
-	enabled: false,
-        requireBase: true
-    });
+    $locationProvider.html5Mode(true);
 });
