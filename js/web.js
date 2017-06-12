@@ -1,4 +1,4 @@
-angular.module('Tackled', ["ngRoute"])
+angular.module('Tackled', ["ui.router"])
 .controller('WebsiteCtrl', ['$scope', '$http', '$q', function($scope, $http, $q) {
 	console.log("Inside WebsiteCtrl");
 	var quizData='';
@@ -110,19 +110,35 @@ angular.module('Tackled', ["ngRoute"])
 	initializeAll();
 }])
 
-.config(function($routeProvider, $locationProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "home.html"
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+        $urlRouterProvider.otherwise('/home');
+        $locationProvider.html5Mode(true);
+        $stateProvider
+            .state('web',{
+                url:'',
+                templateUrl:'app.html',
+                abstract:true,
+                controller: 'WebsiteCtrl'
+            })
+            .state('web.home', {
+                url: '/home',
+                templateUrl: 'home.html'
+            })
+            .state('web.stories', {
+                url: '/kabaddi-stories',
+                templateUrl: 'kabaddi-stories.html',
+                controller:function($scope){
+                    document.title='Kabaddi Stories - Know more about Kabaddi';
+                    window.scrollTo(0, 0);
+                }
+            })
+            .state('web.sitemap',{
+                url:'/sitemap',
+                templateUrl:'sitemap.html',
+                controller:function($scope){
+                    document.title='Sitemap of ProKabaddiQuiz.com - HTML Version';
+                    window.scrollTo(0, 0);
+                }
+            })
+
     })
-    .when("/kabaddi-stories", {
-        templateUrl : "kabaddi-stories.html"
-    })
-    .when("/prokabaddi-standings", {
-        templateUrl : "standings.html"
-    })
-    .when("/sitemap", {
-        templateUrl : "sitemap.html"
-    });
-    $locationProvider.html5Mode(true);
-});
