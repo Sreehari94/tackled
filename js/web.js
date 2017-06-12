@@ -1,4 +1,4 @@
-angular.module('Tackled', [])
+angular.module('Tackled', ["ngRoute"])
 .controller('WebsiteCtrl', ['$scope', '$http', '$q', function($scope, $http, $q) {
 	console.log("Inside WebsiteCtrl");
 	var quizData='';
@@ -109,3 +109,20 @@ angular.module('Tackled', [])
 
 	initializeAll();
 }])
+
+.config(function($routeProvider, $locationProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "home.html"
+    })
+    .when("/kabaddi-stories", {
+        templateUrl : "kabaddi-stories.html"
+    })
+    .when("/prokabaddi-standings", {
+        templateUrl : "standings.html"
+    })
+    .when("/sitemap", {
+        templateUrl : "sitemap.html"
+    });
+    $locationProvider.html5Mode(true);
+});

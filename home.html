@@ -1,0 +1,61 @@
+<div class="container" style="margin-bottom:30px;margin-top:50px;">
+    <center><h2>Match Practice</h2>
+    <div class="row question-box" id="questionBox">
+        <span class="question-number"><span>Q.</span>{{questionNumber}}</span><br/>
+        <div class="question">{{currentMCQ.question}}</div>
+
+        
+        <label id="blockA"><input id="blockA" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[0].text}}" name="mcq"><span class="optionId">A</span>{{currentMCQ.choices[0].text}}</label>
+
+        
+        <label id="blockB"><input id="blockB" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[1].text}}" name="mcq"><span class="optionId">B</span>{{currentMCQ.choices[1].text}}</label><br/>
+
+        
+        <label id="blockC"><input id="blockC" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[2].text}}" name="mcq"><span class="optionId">C</span>{{currentMCQ.choices[2].text}}</label> 
+
+        
+        <label id="blockD"><input id="blockD" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[3].text}}" name="mcq"><span class="optionId">D</span>{{currentMCQ.choices[3].text}}</label> <br/>
+
+        <button type="button" id="nextButton" class="nextButton" ng-disabled="enableButton" ng-click="shownextQuestion()">Next</button>
+        <button type="button" id="submitButton" class="submitButton" ng-disabled="enableButton" ng-click="showScoreBoard()">Submit</button>
+    </div>
+
+    <div class="row score-box" id="scoreBox">
+        <br/>
+        <h2 style="color:black;" ng-if="points==30">Congratulations</h2>
+        <h3 style="color:black;">You scored <span style="color:red;">{{points}}</span> out of <span style="color:green;">30</span>.</h3>
+        <br/>
+        <p style="color:black;">Enjoyed the Experience. Download Tackled Kabaddi Quiz app.<br/>Play Everyday. Win Money and Merchandise.</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-6" style="margin-top:12%">
+            <h1>Kabaddi Pro Quiz Game</h1>
+            <p>The first ever Kabaddi quiz game app</p>
+            <br/>
+            <br/>
+            <div class="row">
+                <div class="col-sm-6 col-xs-6 col-md-6">
+                    <center>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.messyfractals.tackled&hl=en" onclick="playStoreLink()">
+                            <img src="img/google-app.png" width="100%">
+                        </a>
+                    </center>    
+                </div>
+                <div class="col-sm-6 col-xs-6 col-md-6">
+                    <center>
+                        <a target="_blank" href="#" onclick="appStoreLink()">
+                            <img src="img/iphone-app.png" width="100%">
+                        </a>
+                    </center>    
+                </div>
+            </div>    
+        </div>
+        <div class="col-md-6 col-sm-6" id="mobileScreen">
+            <center>
+                <img src="img/mobile-app.png" width="60%">
+            </center> 
+        </div>
+    </div>
+</div>
