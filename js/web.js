@@ -4,7 +4,7 @@ angular.module('Tackled', ["ui.router"])
 	var quizData='';
 	var quizDatalength=0;
 	$scope.currentMCQ='';
-	$scope.selectedChoice ={
+	$scope.selectedChoice={
 		response:''
 	};
 	$scope.questionNumber=1;
@@ -15,11 +15,11 @@ angular.module('Tackled', ["ui.router"])
 		var deferred=$q.defer();
 		$http.get('json/quiz.json').then(
             function(response) {
-                /*console.log("get MCQ data response: ", response);*/
+                console.log("get MCQ data response: ", response);
                 deferred.resolve(response.data.body);
             },
             function(error) {
-                /*console.log("Error: ", error)*/
+                console.log("Error: ", error)
                 deferred.reject("error");
             }
         )
@@ -28,9 +28,9 @@ angular.module('Tackled', ["ui.router"])
 
 	var showFirstQuestion=function(){
 		quizDatalength=quizData.mcq.length;
-		/*console.log("Quiz data length:", quizDatalength);*/
+		console.log("Quiz data length:", quizDatalength);
 		$scope.currentMCQ=quizData.mcq[0];
-		/*console.log("First Question Data:",$scope.currentMCQ);*/
+		console.log("First Question Data:",$scope.currentMCQ);
 	}
 
 	var initializeAll=function(){
@@ -39,7 +39,7 @@ angular.module('Tackled', ["ui.router"])
 			quizData=response;
 			showFirstQuestion();
 		},function(error){
-			/*console.log("return error:",error);*/
+			console.log("return error:",error);
 		});
 	}
 
@@ -89,11 +89,11 @@ angular.module('Tackled', ["ui.router"])
 	$scope.validateAnswer=function(event){
 		$scope.enableButton=false;
 		disableInputs();
-		/*console.log("Element Id:",event.target.attributes.id.value);*/
+		console.log("Element Id:",event.target.attributes.id.value);
 		var blockId=event.target.attributes.id.value;
-		/*console.log("Selected Choice:",$scope.selectedChoice.response," and Answer:",$scope.currentMCQ.answer);*/
+		console.log("Selected Choice:",$scope.selectedChoice.response," and Answer:",$scope.currentMCQ.answer);
 		if($scope.selectedChoice.response==$scope.currentMCQ.answer){
-			/*console.log("Answeris correct");*/
+			console.log("Answeris correct");
 			$scope.points=$scope.points+10;
 			document.getElementById(blockId).style.backgroundColor="green";
 			document.getElementById(blockId).style.color="white";
@@ -113,39 +113,41 @@ angular.module('Tackled', ["ui.router"])
 }])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/home');
-        $locationProvider.html5Mode(true);
-        $stateProvider
-            .state('web',{
-                url:'',
-                templateUrl:'app.html',
-                abstract:true,
-                controller: 'WebsiteCtrl'
-            })
-            .state('web.home', {
-                url: '/home',
-                templateUrl: 'home.html'
-            })
-            .state('web.stories', {
-                url: '/kabaddi-stories',
-                templateUrl: 'kabaddi-stories.html',
-                controller:function($scope){
-                    document.title='Kabaddi Stories - Know more about Kabaddi';
-                    window.scrollTo(0, 0);
-                }
-            })
-            .state('web.sitemap',{
-                url:'/sitemap',
-                templateUrl:'sitemap.html',
-                controller:function($scope){
-                    document.title='Sitemap of ProKabaddiQuiz.com - HTML Version';
-                    window.scrollTo(0, 0);
-                }
-            })
-
-    })
-
-  .run(['$state', '$stateParams',
-    function($state, $stateParams) {
-        //this solves page refresh and getting back to state
-}]);
+    $urlRouterProvider.otherwise('/home');
+    $locationProvider.html5Mode(true);
+    $stateProvider
+        .state('web',{
+            url:'',
+            templateUrl:'app.html',
+            abstract:true,
+            controller: 'WebsiteCtrl'
+        })
+        .state('web.home', {
+            url: '/home',
+            templateUrl: 'home.html'
+        })
+        .state('web.stories', {
+            url: '/kabaddi-stories',
+            templateUrl: 'kabaddi-stories.html',
+            controller:function($scope){
+                document.title='Kabaddi Stories - Know more about Kabaddi';
+                window.scrollTo(0, 0);
+            }
+        })
+        .state('web.sitemap',{
+            url:'/sitemap',
+            templateUrl:'sitemap.html',
+            controller:function($scope){
+                document.title='Sitemap of ProKabaddiQuiz.com - HTML Version';
+                window.scrollTo(0, 0);
+            }
+        })
+        .state('web.schedule',{
+            url:'/schedule',
+            templateUrl:'schedule.html',
+            controller:function($scope){
+                document.title='Pro Kabaddi League 2017, Season 5 Official Schedule: PKL 5 Time Table & Venue Details';
+                window.scrollTo(0, 0);
+            }
+        })
+});
