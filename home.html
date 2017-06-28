@@ -5,16 +5,16 @@
         <div class="question">{{currentMCQ.question}}</div>
 
         
-        <label id="blockA"><input id="blockA" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[0].text}}" name="mcq"><span class="optionId">A</span>{{currentMCQ.choices[0].text}}</label>
+        <label id="blockA"><input id="blockA" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice.response" value="{{currentMCQ.choices[0].text}}" name="mcq"><span class="optionId">A</span>{{currentMCQ.choices[0].text}}</label>
 
         
-        <label id="blockB"><input id="blockB" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[1].text}}" name="mcq"><span class="optionId">B</span>{{currentMCQ.choices[1].text}}</label><br/>
+        <label id="blockB"><input id="blockB" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice.response" value="{{currentMCQ.choices[1].text}}" name="mcq"><span class="optionId">B</span>{{currentMCQ.choices[1].text}}</label><br/>
 
         
-        <label id="blockC"><input id="blockC" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[2].text}}" name="mcq"><span class="optionId">C</span>{{currentMCQ.choices[2].text}}</label> 
+        <label id="blockC"><input id="blockC" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice.response" value="{{currentMCQ.choices[2].text}}" name="mcq"><span class="optionId">C</span>{{currentMCQ.choices[2].text}}</label> 
 
         
-        <label id="blockD"><input id="blockD" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice" value="{{currentMCQ.choices[3].text}}" name="mcq"><span class="optionId">D</span>{{currentMCQ.choices[3].text}}</label> <br/>
+        <label id="blockD"><input id="blockD" type="radio" ng-click="validateAnswer($event)" ng-model="selectedChoice.response" value="{{currentMCQ.choices[3].text}}" name="mcq"><span class="optionId">D</span>{{currentMCQ.choices[3].text}}</label> <br/>
 
         <button type="button" id="nextButton" class="nextButton" ng-disabled="enableButton" ng-click="shownextQuestion()">Next</button>
         <button type="button" id="submitButton" class="submitButton" ng-disabled="enableButton" ng-click="showScoreBoard()">Submit</button>

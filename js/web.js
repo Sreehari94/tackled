@@ -4,7 +4,9 @@ angular.module('Tackled', ["ui.router"])
 	var quizData='';
 	var quizDatalength=0;
 	$scope.currentMCQ='';
-	$scope.selectedChoice ='';
+	$scope.selectedChoice ={
+		response:''
+	};
 	$scope.questionNumber=1;
 	$scope.enableButton=true;
 	$scope.points=0;
@@ -89,8 +91,8 @@ angular.module('Tackled', ["ui.router"])
 		disableInputs();
 		/*console.log("Element Id:",event.target.attributes.id.value);*/
 		var blockId=event.target.attributes.id.value;
-		/*console.log("Selected Choice:",$scope.selectedChoice," and Answer:",$scope.currentMCQ.answer);*/
-		if($scope.selectedChoice==$scope.currentMCQ.answer){
+		/*console.log("Selected Choice:",$scope.selectedChoice.response," and Answer:",$scope.currentMCQ.answer);*/
+		if($scope.selectedChoice.response==$scope.currentMCQ.answer){
 			/*console.log("Answeris correct");*/
 			$scope.points=$scope.points+10;
 			document.getElementById(blockId).style.backgroundColor="green";
