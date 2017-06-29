@@ -131,7 +131,14 @@ angular.module('Tackled', ["ui.router"])
             templateUrl: 'kabaddi-stories.html',
             controller:function($scope){
                 document.title='Kabaddi Stories - Know more about Kabaddi';
+                var meta=document.getElementsByTagName("meta");
+	            for (var i=0; i<meta.length; i++) {
+	                if (meta[i].name.toLowerCase()=="description") {
+	                    meta[i].content="Latest News on Kabaddi. Read breaking stories and opinion articles on Kabaddi";
+	                }
+	            }
                 window.scrollTo(0, 0);
+
             }
         })
         .state('web.sitemap',{
@@ -147,6 +154,12 @@ angular.module('Tackled', ["ui.router"])
             templateUrl:'schedule.html',
             controller:function($scope){
                 document.title='Pro Kabaddi League 2017, Season 5 Official Schedule: PKL 5 Time Table & Venue Details';
+                var meta=document.getElementsByTagName("meta");
+	            for (var i=0; i<meta.length; i++) {
+	                if (meta[i].name.toLowerCase()=="description") {
+	                    meta[i].content="The official schedule of the Pro Kabaddi League 2017 Season 5 has been revealed.";
+	                }
+	            }
                 window.scrollTo(0, 0);
             }
         })
