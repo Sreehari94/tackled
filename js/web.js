@@ -136,12 +136,14 @@ angular.module('Tackled', ["ui.router"])
 	                if (meta[i].name.toLowerCase()=="description") {
 	                    meta[i].content="Latest News on Kabaddi. Read breaking stories and opinion articles on Kabaddi";
 	                }
-	                if (meta[i].property.toLowerCase()=="og:title"){
+	                /*if (meta[i].property.toLowerCase()=="og:title"){
 	                	meta[i].content="Kabaddi Stories - Know more about Kabaddi";
 	                }
 	                if (meta[i].property.toLowerCase()=="og:description"){
 	                	meta[i].content="Latest News on Kabaddi. Read breaking stories and opinion articles on Kabaddi";
-	                }
+	                }*/
+	                $('meta[property=og:title]').attr('content', 'Kabaddi Stories - Know more about Kabaddi');
+	                $('meta[property=og:description]').attr('content', 'Latest News on Kabaddi. Read breaking stories and opinion articles on Kabaddi');
 	            }
                 window.scrollTo(0, 0);
 
@@ -165,12 +167,14 @@ angular.module('Tackled', ["ui.router"])
 	                if (meta[i].name.toLowerCase()=="description") {
 	                    meta[i].content="The official schedule of the Pro Kabaddi League 2017 Season 5 has been revealed.";
 	                }
-	                if (meta[i].property.toLowerCase()=="og:title"){
+	                /*if (meta[i].property.toLowerCase()=="og:title"){
 	                	meta[i].content="Pro Kabaddi League 2017, Season 5 Official Schedule: PKL 5 Time Table & Venue Details";
 	                }
 	                if (meta[i].property.toLowerCase()=="og:description"){
 	                	meta[i].content="The official schedule of the Pro Kabaddi League 2017 Season 5 has been revealed.";
-	                }
+	                }*/
+	                $('meta[property=og:title]').attr('content', 'Pro Kabaddi League 2017, Season 5 Official Schedule: PKL 5 Time Table & Venue Details');
+	                $('meta[property=og:description]').attr('content', 'The official schedule of the Pro Kabaddi League 2017 Season 5 has been revealed.');
 	            }
                 window.scrollTo(0, 0);
             }
