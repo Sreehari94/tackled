@@ -152,7 +152,7 @@ angular.module('Tackled', ["ui.router"])
             }
         })
         .state('web.schedule',{
-            url:'/schedule',
+            url:'/prokabaddi-2017-season-5-schedule',
             templateUrl:'schedule.html',
             controller:function($scope){
                 document.title='Pro Kabaddi League 2017, Season 5 Official Schedule: PKL 5 Time Table & Venue Details';
@@ -163,6 +163,22 @@ angular.module('Tackled', ["ui.router"])
 	                }
 	                $("meta[property='og:title']").attr('content', 'Pro Kabaddi League 2017, Season 5 Official Schedule: PKL 5 Time Table & Venue Details');
 	                $("meta[property='og:description']").attr('content', 'The official schedule of the Pro Kabaddi League 2017 Season 5 has been revealed.');
+	            }
+                window.scrollTo(0, 0);
+            }
+        })
+        .state('web.contest',{
+            url:'/prokabaddi-facebook-contest',
+            templateUrl:'contest.html',
+            controller:function($scope){
+                document.title='Kabaddi Pro Quiz Game - FB Contest Rules';
+                var meta=document.getElementsByTagName("meta");
+	            for (var i=0; i<meta.length; i++) {
+	                if (meta[i].name.toLowerCase()=="description") {
+	                    meta[i].content="Kabaddi Pro Quiz Game App is organising the contest for Kabaddi lovers and followers. Participate in the facebook contest and win exciting prizes.";
+	                }
+	                $("meta[property='og:title']").attr('content', 'Pro Kabaddi League 2017 Season 5 - Facebook Contest');
+	                $("meta[property='og:description']").attr('content', 'Kabaddi Pro Quiz Game App is organising the contest for Kabaddi lovers and followers. Participate in the facebook contest and win exciting prizes.');
 	            }
                 window.scrollTo(0, 0);
             }
