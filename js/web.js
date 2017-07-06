@@ -112,6 +112,78 @@ angular.module('Tackled', ["ui.router"])
 	initializeAll();
 }])
 
+.controller('ContestCtrl', ['$scope', '$http', '$q', '$stateParams','$state', function($scope, $http, $q, $stateParams, $state) {
+	console.log("stateParams: ",$stateParams.pageId);
+	$scope.contestData='';
+	window.scrollTo(0, 0);
+	var getContestData=function(){
+            var deferred= $q.defer();
+            if(!$scope.contestData){
+                console.log("Inside contestData if part");
+                $http.get('json/contest.json').then(
+                    function(response) {
+                        console.log("Contest response: ", response);
+                        $scope.contestData=response.data.body;
+                        for(var i=0;i<$scope.contestData.contest.length;i++){
+                            if($scope.contestData.contest[i].pageId==$stateParams.pageId){
+                                document.title ='DailyPanga Facebook Contest - Kabaddi Pro Quiz Game';
+                                deferred.resolve($scope.contestData.contest[i]);
+                                break;
+                            }else{
+                                if(i==$scope.contestData.contest.length-1){
+                                    $state.go('web.home');
+                                }  
+                            }
+                        }
+                    },
+                    function(error) {
+                        console.log("Error: ", error);
+                        deferred.reject();
+                    }
+                )
+            }else{
+                console.log("Inside contestData else part");
+                for(var i=0;i<$scope.contestData.contest.length;i++){
+                    if($scope.contestData.contest[i].pageId==$stateParams.pageId){
+                        document.title ='DailyPanga Facebook Contest - Kabaddi Pro Quiz Game';
+                        deferred.resolve($scope.contestData.contest[i]);
+                        break;
+                    }else{
+                        if(i==$scope.contestData.contest.length-1){
+                            $state.go('web.home');
+                        }   
+                    }
+                }
+            } 
+            return deferred.promise;  
+        }
+
+        $scope.showPrevious=function(pageId){
+        	console.log("Page ID: ",pageId);
+        	var newPageId= pageId-1;
+        	$state.go('web.contest',{'pageId':newPageId});
+        }
+
+        $scope.showNext=function(pageId){
+        	console.log("Page ID: ",pageId);
+        	var newPageId= pageId+1;
+        	$state.go('web.contest',{'pageId':newPageId});
+        }
+
+        var showContestData=function(){
+            getContestData().then(function(response){
+                $scope.contestDetails=response;
+                $("meta[property='og:title']").attr('content', $scope.contestDetails.metaTitle);
+	            $("meta[property='og:description']").attr('content', $scope.contestDetails.metaDescription);
+            },function(error){
+                $state.go('web.home');
+            });
+        }
+		
+        showContestData();
+
+}])
+
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/home');
     $locationProvider.html5Mode(true);
@@ -167,9 +239,9 @@ angular.module('Tackled', ["ui.router"])
                 window.scrollTo(0, 0);
             }
         })
-        .state('web.contest',{
-            url:'/prokabaddi-facebook-contest',
-            templateUrl:'contest.html',
+        .state('web.rules',{
+            url:'/prokabaddi-facebook-contest-rules',
+            templateUrl:'rules.html',
             controller:function($scope){
                 document.title='Kabaddi Pro Quiz Game - FB Contest Rules';
                 var meta=document.getElementsByTagName("meta");
@@ -182,5 +254,10 @@ angular.module('Tackled', ["ui.router"])
 	            }
                 window.scrollTo(0, 0);
             }
+        })
+		.state('web.contest',{
+            url:'/daily-panga-facebook-kabaddi-contest/:pageId',
+            templateUrl:'contest.html',
+            controller:'ContestCtrl'
         })
 });
