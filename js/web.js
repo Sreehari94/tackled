@@ -159,13 +159,13 @@ angular.module('Tackled', ["ui.router"])
         }
 
         $scope.showPrevious=function(pageId){
-        	console.log("Page ID: ",pageId);
+        	/*console.log("Page ID: ",pageId);*/
         	var newPageId= pageId-1;
         	$state.go('web.contest',{'pageId':newPageId});
         }
 
         $scope.showNext=function(pageId){
-        	console.log("Page ID: ",pageId);
+        	/*console.log("Page ID: ",pageId);*/
         	var newPageId= pageId+1;
         	$state.go('web.contest',{'pageId':newPageId});
         }
@@ -173,8 +173,18 @@ angular.module('Tackled', ["ui.router"])
         var showContestData=function(){
             getContestData().then(function(response){
                 $scope.contestDetails=response;
+                var pageUrl="http://www.prokabaddiquiz.com/daily-panga-facebook-kabaddi-contest/"+$scope.contestDetails.pageId;
+                document.title=$scope.contestDetails.metaTitle;
+                var meta=document.getElementsByTagName("meta");
+                for (var i=0; i<meta.length; i++) {
+                    if (meta[i].name.toLowerCase()=="description") {
+                        meta[i].content=$scope.contestDetails.metaDescription;
+                    }
+                }
                 $("meta[property='og:title']").attr('content', $scope.contestDetails.metaTitle);
 	            $("meta[property='og:description']").attr('content', $scope.contestDetails.metaDescription);
+                $("meta[property='og:url']").attr('content', pageUrl);
+
             },function(error){
                 $state.go('web.home');
             });
