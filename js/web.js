@@ -1,7 +1,9 @@
 angular.module('Tackled', ["ui.router"])
 .controller('WebsiteCtrl', ['$scope', '$http', '$q', function($scope, $http, $q) {
 	console.log("Inside WebsiteCtrl");
-	var quizData='';
+	var quizData={
+        mcq:[]
+    };
 	var quizDatalength=0;
 	$scope.currentMCQ='';
 	$scope.selectedChoice={
@@ -33,11 +35,43 @@ angular.module('Tackled', ["ui.router"])
 		console.log("First Question Data:",$scope.currentMCQ);
 	}
 
+    var makeQuestionCollection=function(response){
+        /*console.log("Get quiz data response:", response);*/
+        var limit=3;
+        for(var i=0; i<=limit;i++){
+            if(i==3){
+               showFirstQuestion(); 
+            }else{
+                quizData.mcq[i]=response.mcq[Math.floor(Math.random()*response.mcq.length)];
+                /*console.log(response.mcq[Math.floor(Math.random()*response.mcq.length)]);*/
+            }
+        }
+        /*console.log("Quiz Data:",quizData);*/
+    }
+
+    $scope.replayMCQ = function(){
+        initializeAll();
+        $scope.points=0;
+        $scope.currentMCQ='';
+        $scope.selectedChoice={
+            response:''
+        };
+        $scope.questionNumber=1;
+        $scope.enableButton=true;
+        clearBlocksCss();
+        enableInputs();
+        document.getElementById("questionBox").style.display="block";
+        document.getElementById("scoreBox").style.display="none";
+        document.getElementById("submitButton").style.display="none";
+        document.getElementById("nextButton").style.display="inline-block";
+    }
 	var initializeAll=function(){
 		console.log("Inside initialize method");
 		getQuizData().then(function(response){
-			quizData=response;
-			showFirstQuestion();
+			/*quizData=response;*/
+            console.log("response length:",response.mcq.length)
+            makeQuestionCollection(response);
+			/*showFirstQuestion();*/
 		},function(error){
 			console.log("return error:",error);
 		});
@@ -184,6 +218,7 @@ angular.module('Tackled', ["ui.router"])
                 $("meta[property='og:title']").attr('content', $scope.contestDetails.metaTitle);
 	            $("meta[property='og:description']").attr('content', $scope.contestDetails.metaDescription);
                 $("meta[property='og:url']").attr('content', pageUrl);
+                $("meta[property='og:image ']").attr('content', $scope.contestDetails.picture);
 
             },function(error){
                 $state.go('web.home');

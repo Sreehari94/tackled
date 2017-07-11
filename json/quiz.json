@@ -8,58 +8,364 @@
   "body": {
   	"mcq":[
     	   {
-            "question":"Only player to have played in 4 Pro Kabaddi finals",
+            "question":"Which team did Rakesh Kumar lead in his PKL debut?",
             "choices":[
                 {
-                    "text":"Shabeer Bapu"
+                    "text":"U Mumba"
                 },
                 {
-                    "text":"Anup Kumar"
+                    "text":"Puneri Paltans"
                 },
-                {
-                    "text":"Rajesh Mondal"
-                },
-                {
-                    "text":"Pardeep Narwal"
-                }
-            ],
-            "answer":"Shabeer Bapu"
-        },
-        {
-            "question":"Manjeet Chillar has always been associated with Puneri Paltans. Which team was he leading before Paltans?",
-            "choices":[
                 {
                     "text":"Patna Pirates"
                 },
                 {
-                    "text":"Jaipur Pink Panthers"
-                },
-                {
                     "text":"Bengaluru Bulls"
-                },
-                {
-                    "text":"Haryana Steelers"
                 }
             ],
-            "answer":"Bengaluru Bulls"
+            "answer":"Patna Pirates"
         },
         {
-            "question":"Mohit Chillar : Bengaluru Bulls = ? : Puneri Paltan",
+            "question":"Which Puneri player from Season 4 was the most expensive player in the S5 auctions?",
             "choices":[
                 {
-                    "text":"Manjeet Chillar"
+                    "text":"Nitin Tomar"
                 },
                 {
-                    "text":"Girish Ernak"
+                    "text":"Manjeet Chillar"
                 },
                 {
                     "text":"Ravinder Pahal"
                 },
                 {
-                    "text":"Surender Nada"
+                    "text":"Deepak Niwas Hooda"
                 }
             ],
-            "answer":"Ravinder Pahal"
+            "answer":"Nitin Tomar"
+        },
+        {
+            "question":"Which Bollywood family owns Jaipur Pink Panthers?",
+            "choices":[
+                {
+                    "text":"Kapoors"
+                },
+                {
+                    "text":"Bachchans"
+                },
+                {
+                    "text":"Salman Khan"
+                },
+                {
+                    "text":"Shah Rukh Khan"
+                }
+            ],
+            "answer":"Bachchans"
+        },
+        {
+            "question":"Sandeep Narwal lifted this player off the mat in a display of sheer strength in Season 4 PKL. Who?",
+            "choices":[
+                {
+                    "text":"Anup Kumar"
+                },
+                {
+                    "text":"Rakesh Kumar"
+                },
+                {
+                    "text":"Meraj Sheyk"
+                },
+                {
+                    "text":"Jasvir Singh"
+                }
+            ],
+            "answer":"Meraj Sheyk"
+        },
+        {
+            "question":"Which captain has led his team to the semi-finals to all 4 PKL seasons?",
+            "choices":[
+                {
+                    "text":"Nitin Tomar"
+                },
+                {
+                    "text":"Manjeet Chillar"
+                },
+                {
+                    "text":"Ravinder Pahal"
+                },
+                {
+                    "text":"Deepak Niwas Hooda"
+                }
+            ],
+            "answer":"Manjeet Chillar"
+        },
+        {
+            "question":"Which country do Fazel Athrachali and Abolfazel Maghsoudhalo belong to?",
+            "choices":[
+                {
+                    "text":"Pakistan"
+                },
+                {
+                    "text":"Iran"
+                },
+                {
+                    "text":"Bangladesh"
+                },
+                {
+                    "text":"India"
+                }
+            ],
+            "answer":"Iran"
+        },
+        {
+            "question":"Which Indian State is known to produce tons of Kabaddi talent?",
+            "choices":[
+                {
+                    "text":"Haryana"
+                },
+                {
+                    "text":"Punjab"
+                },
+                {
+                    "text":"Tamil Nadu"
+                },
+                {
+                    "text":"Uttar Pradesh"
+                }
+            ],
+            "answer":"Haryana"
+        },
+        {
+            "question":"Which Indian movies does not depict Kabbadi?",
+            "choices":[
+                {
+                    "text":"Ghilli"
+                },
+                {
+                    "text":"Okkadu"
+                },
+                {
+                    "text":"Pardes"
+                },
+                {
+                    "text":"Dangal"
+                }
+            ],
+            "answer":"Dangal"
+        },
+        {
+            "question":"Which is the most common second name in Kabaddi?",
+            "choices":[
+                {
+                    "text":"Chillar"
+                },
+                {
+                    "text":"Narwal"
+                },
+                {
+                    "text":"Hooda"
+                },
+                {
+                    "text":"Bapu"
+                }
+            ],
+            "answer":"Narwal"
+        },
+        {
+            "question":"Who is the only Polish player to play in PKL?",
+            "choices":[
+                {
+                    "text":"Piotr Pamulak"
+                },
+                {
+                    "text":"Michal Spickzo"
+                },
+                {
+                    "text":"Odgen Nash"
+                },
+                {
+                    "text":"Beata Szyd_o"
+                }
+            ],
+            "answer":"Michal Spickzo"
+        },
+        {
+            "question":"Mahendra Ganesh Rajput has always been associated with Bengal Warriors ever since he made his debut in season 2. He is representing a team from West this season. Which?",
+            "choices":[
+                {
+                    "text":"Fortune Giants"
+                },
+                {
+                    "text":"Bengal Warriors"
+                },
+                {
+                    "text":"Puneri Paltans"
+                },
+                {
+                    "text":"Uttar Pradesh"
+                }
+            ],
+            "answer":"Fortune Giants"
+        },
+        {
+            "question":"Which is the only team to defeat India in World Cup Kabaddi?",
+            "choices":[
+                {
+                    "text":"Pakistan"
+                },
+                {
+                    "text":"Iran"
+                },
+                {
+                    "text":"Bangladesh"
+                },
+                {
+                    "text":"South Korea"
+                }
+            ],
+            "answer":"South Korea"
+        },
+        {
+            "question":"Which foreign country first embraced Kabbadi?",
+            "choices":[
+                {
+                    "text":"Japan"
+                },
+                {
+                    "text":"Kenya"
+                },
+                {
+                    "text":"Nepal"
+                },
+                {
+                    "text":"England"
+                }
+            ],
+            "answer":"Japan"
+        },
+        {
+            "question":"What is the name for Team Tamil Nadu?",
+            "choices":[
+                {
+                    "text":"Tamil Thalaivas"
+                },
+                {
+                    "text":"Tamil Rajnis"
+                },
+                {
+                    "text":"Tamil Tendulkars"
+                },
+                {
+                    "text":"Tamil Azhagans"
+                }
+            ],
+            "answer":"Tamil Thalaivas"
+        },
+        {
+            "question":"How many teams will play in PKL 2017?",
+            "choices":[
+                {
+                    "text":"8"
+                },
+                {
+                    "text":"10"
+                },
+                {
+                    "text":"12"
+                },
+                {
+                    "text":"14"
+                }
+            ],
+            "answer":"12"
+        },
+        {
+            "question":"Which is the only team to won PKL twice?",
+            "choices":[
+                {
+                    "text":"U Mumba"
+                },
+                {
+                    "text":"Jaipur Pink Panthers"
+                },
+                {
+                    "text":"Patna Pirates"
+                },
+                {
+                    "text":"Bengaluru Bulls"
+                }
+            ],
+            "answer":"Patna Pirates"
+        },
+        {
+            "question":"What is the wright cutoff to play Kabaddi?",
+            "choices":[
+                {
+                    "text":"no limit"
+                },
+                {
+                    "text":"85"
+                },
+                {
+                    "text":"90"
+                },
+                {
+                    "text":"100"
+                }
+            ],
+            "answer":"85"
+        },
+        {
+            "question":"Which season of Pro Kabaddi will kick off on July 28th 2017?",
+            "choices":[
+                {
+                    "text":"3"
+                },
+                {
+                    "text":"4"
+                },
+                {
+                    "text":"5"
+                },
+                {
+                    "text":"6"
+                }
+            ],
+            "answer":"5"
+        },
+        {
+            "question":"Crossing this line will give 1 point when there are more than 5 players on mat. Whats the line called?",
+            "choices":[
+                {
+                    "text":"Baulk Line"
+                },
+                {
+                    "text":"Bonus Line"
+                },
+                {
+                    "text":"Fire Line"
+                },
+                {
+                    "text":"Bogie Line"
+                }
+            ],
+            "answer":"Bonus Line"
+        },
+        {
+            "question":"Which team won the 1st edition of Pro Kabaddi League?",
+            "choices":[
+                {
+                    "text":"U Mumba"
+                },
+                {
+                    "text":"Jaipur Pink Panthers"
+                },
+                {
+                    "text":"Bengal Warriors"
+                },
+                {
+                    "text":"Bengaluru Bulls"
+                }
+            ],
+            "answer":"Jaipur Pink Panthers"
         }
         ]
     }
