@@ -60,4 +60,10 @@
 	    <changefreq>weekly</changefreq>
 	    <priority>1.0</priority>
   	</url>
+  	<url>
+	    <loc>http://www.prokabaddiquiz.com/daily-panga-facebook-kabaddi-contest/170709</loc>
+	    <lastmod>2017-07-12</lastmod>
+	    <changefreq>weekly</changefreq>
+	    <priority>1.0</priority>
+  	</url>
 </urlset>

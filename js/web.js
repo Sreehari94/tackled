@@ -305,4 +305,20 @@ angular.module('Tackled', ["ui.router"])
             templateUrl:'contest.html',
             controller:'ContestCtrl'
         })
+        .state('web.poster',{
+            url:'/simple-rules-of-kabaddi',
+            templateUrl:'kabaddi-rules.html',
+            controller:function($scope){
+                document.title='Rules of Kabaddi - Kabaddi Pro Quiz Game';
+                var meta=document.getElementsByTagName("meta");
+                for (var i=0; i<meta.length; i++) {
+                    if (meta[i].name.toLowerCase()=="description") {
+                        meta[i].content="An article post illustrating the simple rules of Kabaddi in both Hindi and English version.";
+                    }
+                    $("meta[property='og:title']").attr('content', 'Rules of Kabaddi - Kabaddi Pro Quiz Game');
+                    $("meta[property='og:description']").attr('content', 'An article post illustrating the simple rules of Kabaddi in both Hindi and English version.');
+                }
+                window.scrollTo(0, 0);
+            }
+        })
 });

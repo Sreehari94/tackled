@@ -43,8 +43,16 @@
             "picture":"https://static.sparrowzapp.com/images/Tackled/Website/ContestQ5.png",
             "pageId":170708,
             "previous":"enable",
-            "next":"disable",
+            "next":"enable",
             "metaTitle":"DailyPanga Facebook Contest - ID:170708",
+            "metaDescription":"Are you a Kabaddi Pro, play our Quiz Game and win prizes daily, weekly and a grand winner, running parallel to season 5 of the prokabaddi league. As the twelve teams Bengal Warriors, Bengaluru Bulls, Dabang Delhi, U Mumba, Puneri Paltan, Patna Pirates, Jaipur Pink Panther, Telugu Titans, Haryana Steelers, battle out on the mat, you can battle out on your very own arena daily." 
+           },
+           {
+            "picture":"https://static.sparrowzapp.com/images/Tackled/Website/ContestQ6.png",
+            "pageId":170709,
+            "previous":"enable",
+            "next":"disable",
+            "metaTitle":"DailyPanga Facebook Contest - ID:170709",
             "metaDescription":"Are you a Kabaddi Pro, play our Quiz Game and win prizes daily, weekly and a grand winner, running parallel to season 5 of the prokabaddi league. As the twelve teams Bengal Warriors, Bengaluru Bulls, Dabang Delhi, U Mumba, Puneri Paltan, Patna Pirates, Jaipur Pink Panther, Telugu Titans, Haryana Steelers, battle out on the mat, you can battle out on your very own arena daily." 
            }
         ]
