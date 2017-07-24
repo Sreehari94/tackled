@@ -305,6 +305,22 @@ angular.module('Tackled', ["ui.router"])
             templateUrl:'contest.html',
             controller:'ContestCtrl'
         })
+        .state('web.privacy',{
+            url:'/privacy-policy',
+            templateUrl:'privacy.html',
+            controller:function($scope){
+                document.title='Terms & Privacy Policy - Kabaddi Pro Quiz Game';
+                var meta=document.getElementsByTagName("meta");
+                for (var i=0; i<meta.length; i++) {
+                    if (meta[i].name.toLowerCase()=="description") {
+                        meta[i].content="Terms and privacy policy for the website and Kabaddi Pro Quiz Game.";
+                    }
+                    $("meta[property='og:title']").attr('content', 'Terms & Privacy Policy - Kabaddi Pro Quiz Game');
+                    $("meta[property='og:description']").attr('content', 'Terms and privacy policy for the website and Kabaddi Pro Quiz Game.');
+                }
+                window.scrollTo(0, 0);
+            }
+        })
         .state('web.poster',{
             url:'/simple-rules-of-kabaddi',
             templateUrl:'kabaddi-rules.html',
@@ -317,6 +333,39 @@ angular.module('Tackled', ["ui.router"])
                     }
                     $("meta[property='og:title']").attr('content', 'Rules of Kabaddi - Kabaddi Pro Quiz Game');
                     $("meta[property='og:description']").attr('content', 'An article post illustrating the simple rules of Kabaddi in both Hindi and English version.');
+                }
+                window.scrollTo(0, 0);
+            }
+        })
+        .state('web.game',{
+            url:'/app-game-rules',
+            templateUrl:'game-rules.html',
+            controller:function($scope){
+                document.title='App Game Rules - Kabaddi Pro Quiz Game';
+                var meta=document.getElementsByTagName("meta");
+                for (var i=0; i<meta.length; i++) {
+                    if (meta[i].name.toLowerCase()=="description") {
+                        meta[i].content="The rules you have to follow to win Merchandise and gifts through playing the games in Kabaddi Pro Quiz Game app.";
+                    }
+                    $("meta[property='og:title']").attr('content', 'App Game Rules - Kabaddi Pro Quiz Game');
+                    $("meta[property='og:description']").attr('content', 'The rules you have to follow to win Merchandise and gifts through playing the games in Kabaddi Pro Quiz Game app.');
+                }
+                window.scrollTo(0, 0);
+            }
+        })
+
+        .state('web.download',{
+            url:'/download',
+            templateUrl:'download.html',
+            controller:function($scope){
+                document.title='Download - Kabaddi Pro Quiz Game';
+                var meta=document.getElementsByTagName("meta");
+                for (var i=0; i<meta.length; i++) {
+                    if (meta[i].name.toLowerCase()=="description") {
+                        meta[i].content="Kabaddi Pro Quiz Game is an unique Quiz Game app themed on Indian and foreign players playing for their franchisees in ProKabaddi. If you think you know Kabaddi and everything there is to know of leading raiders like Anup Kumar, Pardeep Narwal, Manjeet Chillar, Rahul Chaudhary - here is your chance to win some cool merchandise and money daily.";
+                    }
+                    $("meta[property='og:title']").attr('content', 'Download - Kabaddi Pro Quiz Game');
+                    $("meta[property='og:description']").attr('content', 'Kabaddi Pro Quiz Game is an unique Quiz Game app themed on Indian and foreign players playing for their franchisees in ProKabaddi. If you think you know Kabaddi and everything there is to know of leading raiders like Anup Kumar, Pardeep Narwal, Manjeet Chillar, Rahul Chaudhary - here is your chance to win some cool merchandise and money daily.');
                 }
                 window.scrollTo(0, 0);
             }

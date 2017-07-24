@@ -32,6 +32,21 @@ h1,h2,h3,h4,h5,h6,p{
 	font-weight:bold;
 	float:left;
 }
+.conditions {
+    border: 1px solid #d95064;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 5px;
+    color:white;
+}
+.terms{
+	color:white;
+	padding-bottom:5px;
+	letter-spacing: 2px;
+}
+.important{
+	font-weight: bold;
+}
 .question{
 	font-size: 18px;
 	padding-bottom:20px;
