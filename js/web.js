@@ -12,6 +12,7 @@ angular.module('Tackled', ["ui.router"])
 	$scope.questionNumber=1;
 	$scope.enableButton=true;
 	$scope.points=0;
+    $scope.thData = {};
 
 	var getQuizData=function(){
 		var deferred=$q.defer();
@@ -27,6 +28,35 @@ angular.module('Tackled', ["ui.router"])
         )
         return deferred.promise;
 	}
+
+    var getThData=function(){
+        var formData = {
+            "header": {
+                clientId: "SPARROWZ_WEBSITE",
+                apiVersion: "4.7.0"
+            },
+            body: {
+                "cityId": 10001
+            }
+        }
+        console.log('form data to get treasureHunts: ', formData);
+        var req = {
+            method: 'POST',
+            url: "http://prod.app.sparrowzapp.com/o2core/services/guest/getTreasureHunts",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: formData
+        }
+        $http(req).then(
+            function(response) {
+                $scope.thData = response.data.body;
+            },
+            function(error) {
+                console.log("Error: ", error);
+            }
+        )
+    }    
 
 	var showFirstQuestion=function(){
 		quizDatalength=quizData.mcq.length;
@@ -67,6 +97,7 @@ angular.module('Tackled', ["ui.router"])
     }
 	var initializeAll=function(){
 		console.log("Inside initialize method");
+        getThData();
 		getQuizData().then(function(response){
 			/*quizData=response;*/
             console.log("response length:",response.mcq.length)

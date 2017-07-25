@@ -28,4 +28,15 @@
             </center> 
         </div>
     </div>
+    <br/>
+    <div class="row " ng-if="thData.treasureHunts!=null">
+        <center><h4>New Challenges in App</h4></center>
+        <div class="col-sm-4 col-md-4" ng-repeat="item in thData.treasureHunts| limitTo:6 |orderBy:'item.treasureHuntId'">
+            <div class="image_container">
+                <img ng-src="{{item.treasureHuntImgUrl[0]}}" class="img-responsive" alt="{{item.treasureHuntName}}">
+                <div class="th-name">{{item.treasureHuntName}}</div>
+                <br/>
+            </div>
+        </div>
+    </div>
 </div>

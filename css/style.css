@@ -220,6 +220,15 @@ table{
   border-left: 60px solid green;
 }
 
+.th-name{
+	background-color: white;
+	color:black;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+}
+
 .contest-arrow-left {
   width: 0; 
   height: 0; 
