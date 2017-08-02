@@ -1,4 +1,4 @@
-angular.module('Tackled', ["ui.router"])
+angular.module('Tackled', ['ui.router','web.standings'])
 .controller('WebsiteCtrl', ['$scope', '$http', '$q', function($scope, $http, $q) {
 	console.log("Inside WebsiteCtrl");
 	var quizData={
@@ -302,18 +302,7 @@ angular.module('Tackled', ["ui.router"])
         .state('web.standings',{
             url:'/pro-kabaddi-league-2017-season-5-standings',
             templateUrl:'standings.html',
-            controller:function($scope){
-                document.title='Pro Kabaddi League 2017, Season 5 Standings';
-                var meta=document.getElementsByTagName("meta");
-                for (var i=0; i<meta.length; i++) {
-                    if (meta[i].name.toLowerCase()=="description") {
-                        meta[i].content="The League Standings of the Pro Kabaddi League 2017 Season 5 ";
-                    }
-                    $("meta[property='og:title']").attr('content', 'Pro Kabaddi League 2017, Season 5 Standings');
-                    $("meta[property='og:description']").attr('content', 'The League Standings of the Pro Kabaddi League 2017 Season 5');
-                }
-                window.scrollTo(0, 0);
-            }
+            controller:'StandingsCtrl'
         })
         .state('web.schedule',{
             url:'/prokabaddi-2017-season-5-schedule',

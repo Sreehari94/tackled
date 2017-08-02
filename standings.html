@@ -1,221 +1,67 @@
 <div class="container" style="margin-bottom:30px;margin-top:50px;">
 	<center><h2>Pro Kabaddi League 2017, Season 5 Standings</h2></center>
 	<br/><br/>
-	<table class="table table-striped" width="600">
+	<div style="background-color:black;width:100%;"><h4 style="color:white;text-align:center;font-weight:bold;padding:15px;margin:0px;">Zone A</h4></div>
+	<table st-table="standingsData" st-safe-src="rowCollection" sti-table default-sort="rank" default-sort-reverse="false" class="table table-striped" width="600">
 		<thead>
-	      <tr>
-	        <th>Rank</th>
-	        <th>Teams</th>
-	        <th><span class="device_com">Play</span><span class="device_mob">P</span></th>
-	        <th><span class="device_com">Won</span><span class="device_mob">W</span></th>
-	        <th><span class="device_com">Lost</span><span class="device_mob">L</span></th>
-	        <th><span class="device_com">Draw</span><span class="device_mob">D</span></th>
-	        <th><span class="device_com">Score Difference</span><span class="device_mob">S.D</span></th>
-	        <th><span class="device_com">Points</span><span class="device_mob">Pts</span></th>
-	      </tr>
+	      	<tr>
+		        <th st-sort="rank" st-skip-natural="true">Rank</th>
+		        <th st-sort="teamName" st-skip-natural="true">Teams</th>
+		        <th st-sort="play" st-skip-natural="true"><span class="device_com">Play</span><span class="device_mob">P</span></th>
+		        <th st-sort="win" st-skip-natural="true"><span class="device_com">Won</span><span class="device_mob">W</span></th>
+		        <th st-sort="loss" st-skip-natural="true"><span class="device_com">Lost</span><span class="device_mob">L</span></th>
+		        <th st-sort="draw" st-skip-natural="true"><span class="device_com">Draw</span><span class="device_mob">D</span></th>
+		        <th st-sort="scoreDifference" st-skip-natural="true"><span class="device_com">Score Difference</span><span class="device_mob">S.D</span></th>
+		        <th st-sort="points" st-skip-natural="true"><span class="device_com">Points</span><span class="device_mob">Pts</span></th>
+	      	</tr>
 	    </thead>
 	    <tbody>
-	    	<!--Zone A-->
-	    	<tr style="color:white;background-color:black;text-align:center;">
-	    		<td></td>
-	    		<td></td>
-	    		<td></td>
-	    		<td>Zone A</td>
-	    		<td></td>
-	    		<td></td>
-	    		<td></td>
-	    		<td></td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
+	    	<tr ng-repeat="row in standingsData" ng-if="row.zone=='Zone A'">
+	    		<td>{{row.rank}}</td>
 	    		<td>
 	    			<span class="comp_screen">
-	    				<img src="img/teams/2.png" class="team-logo">
+	    				<img ng-src="{{row.teamLogo}}" class="team-logo">
 	    			</span>
-	    			<span class="small_screen">Dabang Delhi K.C.</span>
+	    			<span class="small_screen">{{row.teamName}}</span>
 	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
+	    		<td>{{row.play}}</td>
+	    		<td>{{row.win}}</td>
+	    		<td>{{row.loss}}</td>
+	    		<td>{{row.draw}}</td>
+	    		<td>{{row.scoreDifference}}</td>
+	    		<td>{{row.points}}</td>
 	    	</tr>
-	    	<tr>
-	    		<td>_</td>
+	    </tbody>
+	</table>
+	<div style="background-color:black;width:100%;"><h4 style="color:white;text-align:center;font-weight:bold;padding:15px;margin:0px;">Zone B</h4></div>
+	<table st-table="standingsData" st-safe-src="rowCollection" sti-table default-sort="rank" default-sort-reverse="false" class="table table-striped" width="600">
+		<thead>
+	      	<tr>
+		        <th st-sort="rank" st-skip-natural="true">Rank</th>
+		        <th st-sort="teamName" st-skip-natural="true">Teams</th>
+		        <th st-sort="play" st-skip-natural="true"><span class="device_com">Play</span><span class="device_mob">P</span></th>
+		        <th st-sort="win" st-skip-natural="true"><span class="device_com">Won</span><span class="device_mob">W</span></th>
+		        <th st-sort="loss" st-skip-natural="true"><span class="device_com">Lost</span><span class="device_mob">L</span></th>
+		        <th st-sort="draw" st-skip-natural="true"><span class="device_com">Draw</span><span class="device_mob">D</span></th>
+		        <th st-sort="scoreDifference" st-skip-natural="true"><span class="device_com">Score Difference</span><span class="device_mob">S.D</span></th>
+		        <th st-sort="points" st-skip-natural="true"><span class="device_com">Points</span><span class="device_mob">Pts</span></th>
+	      	</tr>
+	    </thead>
+	    <tbody>
+	    	<tr ng-repeat="row in standingsData" ng-if="row.zone=='Zone B'">
+	    		<td>{{row.rank}}</td>
 	    		<td>
 	    			<span class="comp_screen">
-	    				<img src="img/teams/12.png" class="team-logo">
+	    				<img ng-src="{{row.teamLogo}}" class="team-logo">
 	    			</span>
-	    			<span class="small_screen">Gujarat FortuneGiants</span>
+	    			<span class="small_screen">{{row.teamName}}</span>
 	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/9.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">Haryana Steelers</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/3.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">Jaipur Pink Panthers</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/7.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">Puneri Paltan</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/5.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">U Mumba</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<!--Zone B-->
-	    	<tr style="color:white;background-color:black;text-align:center;">
-	    		<td></td>
-	    		<td></td>
-	    		<td></td>
-	    		<td>Zone B</td>
-	    		<td></td>
-	    		<td></td>
-	    		<td></td>
-	    		<td></td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/4.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">Bengal Warriors</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/1.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">Bengaluru Bulls</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/6.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">Patna Pirates</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/10.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">Tamil Thalaivas</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/8.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">Telugu Titans</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    	</tr>
-	    	<tr>
-	    		<td>_</td>
-	    		<td>
-	    			<span class="comp_screen">
-	    				<img src="img/teams/11.png" class="team-logo">
-	    			</span>
-	    			<span class="small_screen">U.P Yoddha</span>
-	    		</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
-	    		<td>0</td>
+	    		<td>{{row.play}}</td>
+	    		<td>{{row.win}}</td>
+	    		<td>{{row.loss}}</td>
+	    		<td>{{row.draw}}</td>
+	    		<td>{{row.scoreDifference}}</td>
+	    		<td>{{row.points}}</td>
 	    	</tr>
 	    </tbody>
 	</table>
