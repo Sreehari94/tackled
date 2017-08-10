@@ -257,6 +257,84 @@ table{
 .team-logo{
 	width:50px;
 }
+.rule-header{
+	border-top-left-radius: 5px;
+	background-color:orangered;
+	color:white;
+	text-transform: uppercase;
+	border:none;
+	display:inline-block;
+	padding:15px;
+	margin-bottom: 10px;
+}
+.rule-header h5{
+	color:white;
+	text-transform: uppercase;
+	-ms-transform: skewX(20deg); /* IE 9 */
+    -webkit-transform: skewX(20deg); /* Safari */
+    transform: skewX(20deg);
+}
+.rule-box ul{
+	padding-top: 20px;
+	padding-left: 10%;
+}
+.rule-box li{
+	color:white;
+	font-size:16px;
+	padding-bottom:5px;
+	-ms-transform: skewX(20deg); /* IE 9 */
+    -webkit-transform: skewX(20deg); /* Safari */
+    transform: skewX(20deg);
+}
+.winner{
+	-ms-transform: skewX(20deg); /* IE 9 */
+    -webkit-transform: skewX(20deg); /* Safari */
+    transform: skewX(20deg);
+}
+.winnerRow{
+	background: #4CAF50;
+    color: white;
+    width: 96%;
+    font-size: 22px;
+}
+.winner-banner{
+	background: url(../img/banner.png)no-repeat center;
+    height: 200px;
+    margin-bottom: 25px; 
+    width:100%;
+    margin-left: 0px;
+}
+.second-banner{
+	background-image: url(../img/babycolor.png);
+	background-color: inherit;
+	height: auto;
+	width:100%;
+	margin-left: 0px;
+}
+.hide-col{
+	display: inline-block;
+}
+.trophy{
+	background-color: orange;
+	border-radius: 50%;
+	border: 2px solid orangered;
+	margin-top:10px;
+}
+.otherWinner{
+	background: rgba(255,0,0,0.3);
+    width: 96%;
+}
+.rule-box{
+	background-color:rgba(0,0,0,0.3);
+	color:white;
+	border-radius: 5px;
+	border:1px solid whitesmoke;
+	padding-right: 10px;
+	padding-bottom:10px;
+	-ms-transform: skewX(-20deg); /* IE 9 */
+    -webkit-transform: skewX(-20deg); /* Safari */
+    transform: skewX(-20deg);
+}
 th,td{
 	font-size: 18px;
 }
@@ -312,7 +390,33 @@ th,td{
 	.small_screen{
 		display: none;
 	}
+	.hide-col{
+		display: none;
+	}
 	th,td{
 		font-size: 12px;
+	}
+	.rule-box{
+		-ms-transform: skewX(0deg); /* IE 9 */
+	    -webkit-transform: skewX(0deg); /* Safari */
+	    transform: skewX(0deg);
+	}
+	.rule-header h5{
+		-ms-transform: skewX(0deg); /* IE 9 */
+	    -webkit-transform: skewX(0deg); /* Safari */
+	    transform: skewX(0deg);
+	}
+	.rule-box li{
+		-ms-transform: skewX(0deg); /* IE 9 */
+	    -webkit-transform: skewX(0deg); /* Safari */
+	    transform: skewX(0deg);
+	}
+	.winner{
+		-ms-transform: skewX(0deg); /* IE 9 */
+	    -webkit-transform: skewX(0deg); /* Safari */
+	    transform: skewX(0deg);
+	}
+	.winnerRow{
+		font-size: 14px;
 	}
 }

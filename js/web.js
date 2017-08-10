@@ -320,6 +320,22 @@ angular.module('Tackled', ['ui.router','web.standings'])
                 window.scrollTo(0, 0);
             }
         })
+        .state('web.match',{
+            url:'/prokabaddi-2017-match-schedule',
+            templateUrl:'match-schedule.html',
+            controller:function($scope){
+                document.title='Pro Kabaddi League 2017, Season 5 Official Schedule: PKL 5 Time Table & Venue Details';
+                var meta=document.getElementsByTagName("meta");
+                for (var i=0; i<meta.length; i++) {
+                    if (meta[i].name.toLowerCase()=="description") {
+                        meta[i].content="The official schedule of the Pro Kabaddi League 2017 Season 5 has been revealed.";
+                    }
+                    $("meta[property='og:title']").attr('content', 'Pro Kabaddi League 2017, Season 5 Official Schedule: PKL 5 Time Table & Venue Details');
+                    $("meta[property='og:description']").attr('content', 'The official schedule of the Pro Kabaddi League 2017 Season 5 has been revealed.');
+                }
+                window.scrollTo(0, 0);
+            }
+        })        
         .state('web.rules',{
             url:'/prokabaddi-facebook-contest-rules',
             templateUrl:'rules.html',
@@ -353,6 +369,22 @@ angular.module('Tackled', ['ui.router','web.standings'])
                     }
                     $("meta[property='og:title']").attr('content', 'Terms & Privacy Policy - Kabaddi Pro Quiz Game');
                     $("meta[property='og:description']").attr('content', 'Terms and privacy policy for the website and Kabaddi Pro Quiz Game.');
+                }
+                window.scrollTo(0, 0);
+            }
+        })
+        .state('web.winners',{
+            url:'/contest-winner-announcement',
+            templateUrl:'announcement.html',
+            controller:function($scope){
+                document.title='Contest Winner Announcement - Kabaddi Pro Quiz Game';
+                var meta=document.getElementsByTagName("meta");
+                for (var i=0; i<meta.length; i++) {
+                    if (meta[i].name.toLowerCase()=="description") {
+                        meta[i].content="Contest Winner Announcement - Kabaddi Pro Quiz Game";
+                    }
+                    $("meta[property='og:title']").attr('content', 'Contest Winner Announcement - Kabaddi Pro Quiz Game');
+                    $("meta[property='og:description']").attr('content', 'Contest Winner Announcement - Kabaddi Pro Quiz Game');
                 }
                 window.scrollTo(0, 0);
             }

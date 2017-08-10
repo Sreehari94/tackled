@@ -144,4 +144,22 @@
 	    <changefreq>weekly</changefreq>
 	    <priority>1.0</priority>
   	</url>
+  	<url>
+	    <loc>http://www.prokabaddiquiz.com/daily-panga-facebook-kabaddi-contest/170719</loc>
+	    <lastmod>2017-08-04</lastmod>
+	    <changefreq>weekly</changefreq>
+	    <priority>1.0</priority>
+  	</url>
+  	<url>
+	    <loc>http://www.prokabaddiquiz.com/daily-panga-facebook-kabaddi-contest/170720</loc>
+	    <lastmod>2017-08-07</lastmod>
+	    <changefreq>weekly</changefreq>
+	    <priority>1.0</priority>
+  	</url>
+  	<url>
+	    <loc>http://www.prokabaddiquiz.com/contest-winner-announcement</loc>
+	    <lastmod>2017-08-10</lastmod>
+	    <changefreq>daily</changefreq>
+	    <priority>1.0</priority>
+  	</url>
 </urlset>
