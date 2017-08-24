@@ -27,12 +27,12 @@ angular.module('web.standings',['smart-table-improved'])
 		  			"teamName":"Dabang Delhi K.C.",
 		  			"teamLogo":"img/teams/2.png",
 		  			"rank":6,
-		  			"play":6,
+		  			"play":7,
 		  			"win":2,
-		  			"loss":4,
+		  			"loss":5,
 		  			"draw":0,
-		  			"scoreDifference":-24,
-		  			"points":13
+		  			"scoreDifference":-26,
+		  			"points":14
 		  		},
 		  		{
 		  			"zone":"Zone A",
@@ -50,13 +50,13 @@ angular.module('web.standings',['smart-table-improved'])
 		  			"zone":"Zone A",
 		  			"teamName":"Haryana Steelers",
 		  			"teamLogo":"img/teams/9.png",
-		  			"rank":3,
-		  			"play":5,
-		  			"win":2,
+		  			"rank":2,
+		  			"play":6,
+		  			"win":3,
 		  			"loss":1,
 		  			"draw":2,
-		  			"scoreDifference":18,
-		  			"points":17
+		  			"scoreDifference":20,
+		  			"points":22
 		  		},
 		  		{
 		  			"zone":"Zone A",
@@ -74,7 +74,7 @@ angular.module('web.standings',['smart-table-improved'])
 		  			"zone":"Zone A",
 		  			"teamName":"Puneri Paltan",
 		  			"teamLogo":"img/teams/7.png",
-		  			"rank":2,
+		  			"rank":3,
 		  			"play":6,
 		  			"win":4,
 		  			"loss":2,
@@ -135,12 +135,12 @@ angular.module('web.standings',['smart-table-improved'])
 		  			"teamName":"Tamil Thalaivas",
 		  			"teamLogo":"img/teams/10.png",
 		  			"rank":6,
-		  			"play":5,
+		  			"play":6,
 		  			"win":1,
 		  			"loss":3,
-		  			"draw":1,
+		  			"draw":2,
 		  			"scoreDifference":-2,
-		  			"points":11
+		  			"points":14
 		  		},
 		  		{
 		  			"zone":"Zone B",
@@ -159,12 +159,12 @@ angular.module('web.standings',['smart-table-improved'])
 		  			"teamName":"U.P Yoddha",
 		  			"teamLogo":"img/teams/11.png",
 		  			"rank":1,
-		  			"play":9,
+		  			"play":10,
 		  			"win":3,
 		  			"loss":5,
-		  			"draw":1,
+		  			"draw":2,
 		  			"scoreDifference":-8,
-		  			"points":22
+		  			"points":25
 		  		}
 			];
 		}
