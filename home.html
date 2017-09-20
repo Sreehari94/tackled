@@ -1,3 +1,44 @@
+<div class="container">
+    <div class="row " ng-if="thData.treasureHunts!=null">
+        <center><h2>New Challenges in App</h2></center>
+        <div class="col-sm-4 col-md-4" ng-repeat="item in thData.treasureHunts| limitTo:6 |orderBy:'item.treasureHuntId'">
+            <div class="image_container">
+                <img ng-src="{{item.treasureHuntImgUrl[0]}}" class="img-responsive" alt="{{item.treasureHuntName}}">
+                <div class="th-name">{{item.treasureHuntName}}</div>
+                <br/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6" style="margin-top:12%">
+            <h1>Kabaddi Pro Quiz Game</h1>
+            <p>The first ever Kabaddi quiz game app</p>
+            <br/>
+            <br/>
+            <div class="row">
+                <div class="col-sm-6 col-xs-6 col-md-6">
+                    <center>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.messyfractals.tackled&hl=en" onclick="playStoreLink()">
+                            <img src="img/google-app.png" width="100%">
+                        </a>
+                    </center>    
+                </div>
+                <div class="col-sm-6 col-xs-6 col-md-6">
+                    <center>
+                        <a target="_blank" href="https://itunes.apple.com/us/app/kabaddi-pro-season-5-games/id1261349175" onclick="appStoreLink()">
+                            <img src="img/iphone-app.png" width="100%">
+                        </a>
+                    </center>    
+                </div>
+            </div>    
+        </div>
+        <div class="col-md-6 col-sm-6" id="mobileScreen">
+            <center>
+                <img src="img/mobile-app.png" width="60%">
+            </center> 
+        </div>
+    </div>
+</div>
 <div class="container" style="margin-bottom:30px;margin-top:50px;">
     <center><h2>Match Practice</h2>
     <div class="row question-box" id="questionBox">
@@ -33,47 +74,6 @@
     <center>
         <a class="contest-button" href="daily-panga-facebook-kabaddi-contest/170721">Today's Contest</a>
     </center>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-sm-6" style="margin-top:12%">
-            <h1>Kabaddi Pro Quiz Game</h1>
-            <p>The first ever Kabaddi quiz game app</p>
-            <br/>
-            <br/>
-            <div class="row">
-                <div class="col-sm-6 col-xs-6 col-md-6">
-                    <center>
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.messyfractals.tackled&hl=en" onclick="playStoreLink()">
-                            <img src="img/google-app.png" width="100%">
-                        </a>
-                    </center>    
-                </div>
-                <div class="col-sm-6 col-xs-6 col-md-6">
-                    <center>
-                        <a target="_blank" href="https://itunes.apple.com/us/app/kabaddi-pro-season-5-games/id1261349175" onclick="appStoreLink()">
-                            <img src="img/iphone-app.png" width="100%">
-                        </a>
-                    </center>    
-                </div>
-            </div>    
-        </div>
-        <div class="col-md-6 col-sm-6" id="mobileScreen">
-            <center>
-                <img src="img/mobile-app.png" width="60%">
-            </center> 
-        </div>
-    </div>
-    <div class="row " ng-if="thData.treasureHunts!=null">
-        <center><h4>New Challenges in App</h4></center>
-        <div class="col-sm-4 col-md-4" ng-repeat="item in thData.treasureHunts| limitTo:6 |orderBy:'item.treasureHuntId'">
-            <div class="image_container">
-                <img ng-src="{{item.treasureHuntImgUrl[0]}}" class="img-responsive" alt="{{item.treasureHuntName}}">
-                <div class="th-name">{{item.treasureHuntName}}</div>
-                <br/>
-            </div>
-        </div>
-    </div>
 </div>
 <!-- <div class="modal fade" id="pollModal" role="dialog">
     <div class="modal-dialog modal-lg">
